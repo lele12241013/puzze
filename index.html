@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uma Surpresa Para Você ❤️</title>
+  <!-- Fontes Fofas do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Corações Flutuantes no Fundo -->
+  <div id="bg-hearts" class="bg-hearts"></div>
+
+  <main class="app-container">
+    <!-- ESTÁGIO 1: QUEBRA-CABEÇA FOFO -->
+    <section id="stage-puzzle" class="card-stage">
+      <span class="badge">✨ Missão Especial de Amor ✨</span>
+      <h1 class="title">Monte o nosso coração</h1>
+      <p class="subtitle">
+        Toque em duas pecinhas para trocá-las de lugar e destravar a sua cartinha secreta! 💌
+      </p>
+
+      <div class="progress-wrapper">
+        <span id="progress-text">0 de 9 pedacinhos no lugar</span>
+        <div id="progress-hearts" class="progress-hearts"></div>
+      </div>
+
+      <div class="puzzle-board-wrapper">
+        <div id="hint-overlay" class="hint-overlay"></div>
+        <div id="puzzle-board" class="puzzle-board"></div>
+      </div>
+
+      <div class="puzzle-actions">
+        <button id="btn-hint" class="btn-secondary">
+          👀 Segure para espiar
+        </button>
+        <button id="btn-autosolve" class="btn-secondary">
+          ✨ Resolver com magia
+        </button>
+      </div>
+    </section>
+
+    <!-- ESTÁGIO 2: ENVELOPE LACRADO -->
+    <section id="stage-envelope" class="card-stage envelope-stage hidden">
+      <span class="badge">🎉 Quebra-cabeça completo! 🎉</span>
+      <h2 class="title">Você desbloqueou uma cartinha!</h2>
+      <p class="subtitle">
+        Tem alguém aqui que é completamente apaixonado por você... Toque no selo para abrir!
+      </p>
+
+      <div id="envelope-wrapper" class="envelope-wrapper">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter-preview">
+          <p>Para o meu amor ❤️</p>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="wax-seal">❤️</div>
+      </div>
+
+      <button id="btn-open-envelope" class="btn-primary">
+        💌 Abrir Cartinha
+      </button>
+    </section>
+
+    <!-- ESTÁGIO 3: A CARTINHA DE AMOR -->
+    <section id="stage-letter" class="letter-paper hidden">
+      <h2 id="letter-greeting" class="letter-greeting">Para o amor da minha vida,</h2>
+      
+      <div id="letter-body" class="letter-body"></div>
+
+      <div class="letter-quote-box">
+        <p id="letter-quote" class="letter-quote"></p>
+      </div>
+
+      <p id="letter-signature" class="letter-signature"></p>
+
+      <div class="letter-footer">
+        <button id="btn-more-love" class="btn-primary">
+          💖 Receber chuva de amor e beijos!
+        </button>
+        <p id="love-counter-msg" class="love-counter-msg"></p>
+        <button id="btn-replay" class="btn-secondary">
+          🧩 Jogar o quebra-cabeça de novo
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
